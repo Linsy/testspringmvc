@@ -24,6 +24,11 @@ public class Book implements Identifiable<Integer> {
     public Book() {
     }
 
+    @Override
+    public Integer getId() {
+        return this.getPk();
+    }
+
     public String getAuthor() {
         return author;
     }
@@ -56,8 +61,4 @@ public class Book implements Identifiable<Integer> {
         this.comments = comments;
     }
 
-    @Override
-    public Integer getId() {
-        return this.getPk();
-    }
 }

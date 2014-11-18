@@ -1,8 +1,7 @@
 package demo;
 
-//import org.lightadmin.api.config.LightAdmin;
+
 import org.lightadmin.api.config.LightAdmin;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 
@@ -14,10 +13,9 @@ public class ServletInitializer extends SpringBootServletInitializer {
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         LightAdmin.configure(servletContext)
-                .basePackage("org.lightadmin.boot.administration")
+                .basePackage("demo.administration")
                 .baseUrl("/admin")
-                .security(false)
-                .backToSiteUrl("http://lightadmin.org");
+                .security(false);
 
         super.onStartup(servletContext);
     }

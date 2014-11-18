@@ -20,12 +20,15 @@ public class Comment implements Identifiable<Integer> {
     @NotNull
     private Book book;
     @NotNull
-    private String comment;
+    private String message;
     private String email;
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    private User user;
 
     public Comment() {
+    }
+
+    @Override
+    public Integer getId() {
+        return this.getPk();
     }
 
     public Integer getPk() {
@@ -44,27 +47,13 @@ public class Comment implements Identifiable<Integer> {
         this.book = book;
     }
 
-    public String getComment() {
-        return comment;
+    public String getMessage() {
+        return message;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setMessage(String message) {
+        this.message = message;
     }
-
-    @Override
-    public Integer getId() {
-        return this.getPk();
-    }
-
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
-
 
     public String getEmail() {
         return email;

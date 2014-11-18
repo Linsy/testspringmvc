@@ -58,13 +58,13 @@ public class BookTest {
 
         this.comment = new Comment();
         this.comment.setBook(this.book);
-        this.comment.setComment("comment op boek1 door user");
+        this.comment.setMessage("comment op boek1 door user");
 //        this.comment.setUser(this.user);
         this.commentRepository.save(this.comment);
 
         this.comment2 = new Comment();
         this.comment2.setBook(this.book);
-        this.comment2.setComment("comment2 op boek1 door otherUser");
+        this.comment2.setMessage("comment2 op boek1 door otherUser");
 //        this.comment2.setUser(this.otherUser);
         this.commentRepository.save(this.comment2);
 
