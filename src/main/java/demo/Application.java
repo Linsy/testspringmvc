@@ -26,11 +26,11 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
-    public MessageSource messageSource(){
-        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasename("/resources/");
-        return messageSource;
-    }
+//    @Bean
+//    public MessageSource messageSource(){
+//        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+//        messageSource.setBasename("/resources/");
+//        return messageSource;
+//    }
 }
 

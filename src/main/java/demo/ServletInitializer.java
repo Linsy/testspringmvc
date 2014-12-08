@@ -18,6 +18,8 @@ public class ServletInitializer extends SpringBootServletInitializer {
                 .security(false);
 
         super.onStartup(servletContext);
+
+        servletContext.log("****************** eind init" + servletContext.getServletContextName());
     }
 
 
